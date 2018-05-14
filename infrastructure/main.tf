@@ -21,4 +21,6 @@ module "feature-toggle-web-console" {
   is_frontend         = true
   additional_host_name = "www.rpe-feature-toggle.gov.uk"
 
+  app_settings = {
+  }
 }
