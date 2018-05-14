@@ -1,11 +1,19 @@
 server:
   port: 9899
 
-management:
-  endpoints:
-    web:
-      base-path: /
-
 spring:
   application:
     name: Feature Toggle Web Console
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+security:
+   user:
+    name: ff4j
+    password: ff4j
+
+ff4j:
+ webapi:
+  authentication: false
+  authorization: false
+
