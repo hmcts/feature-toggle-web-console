@@ -19,6 +19,7 @@ module "feature-toggle-web-console" {
   resource_group_name = "${azurerm_resource_group.rg.name}"
   subscription        = "${var.subscription}"
   is_frontend         = true
+  additional_host_name = "www.rpe-feature-toggle.gov.uk"
 
   app_settings = {
     LOGBACK_REQUIRE_ALERT_LEVEL = false
