@@ -115,7 +115,6 @@ def versions = [
   springfoxSwagger: '2.7.0',
   reformLogging   : '2.0.2',
   jackson         : dependencyManagement.importedProperties['jackson.version'],
-  logback         : '1.2.3'
 ]
 
 dependencies {
@@ -123,29 +122,11 @@ dependencies {
   compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: springBootVersion
   compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop', version: springBootVersion
   compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: springBootVersion
-  compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: versions.jackson
-  compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: versions.jackson
-
-  compile group: 'org.flywaydb', name: 'flyway-core', version: '5.0.7'
-  compile group: 'org.postgresql', name: 'postgresql', version: '42.2.1'
 
   compile group: 'io.springfox', name: 'springfox-swagger2', version: versions.springfoxSwagger
   compile group: 'io.springfox', name: 'springfox-swagger-ui', version: versions.springfoxSwagger
 
-  compile group: 'uk.gov.hmcts.reform', name: 'java-logging-appinsights', version: versions.reformLogging
-  compile group: 'uk.gov.hmcts.reform', name: 'java-logging-httpcomponents', version: versions.reformLogging
-  compile group: 'uk.gov.hmcts.reform', name: 'java-logging-spring', version: versions.reformLogging
   compile group: 'uk.gov.hmcts.reform', name: 'http-proxy-spring-boot-autoconfigure', version: '1.1.0'
-
-  compile group: 'ch.qos.logback', name: 'logback-classic', version: versions.logback
-  compile group: 'ch.qos.logback', name: 'logback-core', version: versions.logback
-
-  compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix', version: '1.4.0.RELEASE'
-  compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix-dashboard', version: '1.4.0.RELEASE'
-
-  compile group: 'com.microsoft.azure', name: 'azure-servicebus', version: '1.1.1'
-
-  compile group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: springBootVersion
 
   compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: springBootVersion
   compile group: 'org.ff4j', name: 'ff4j-web', version: '1.6.5'
