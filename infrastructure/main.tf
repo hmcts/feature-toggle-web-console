@@ -19,7 +19,7 @@ module "feature-toggle-web-console" {
   resource_group_name = "${azurerm_resource_group.rg.name}"
   subscription        = "${var.subscription}"
   is_frontend         = true
-  additional_host_name = "www.platform-feature-toggle.gov.uk"
+  additional_host_name = "www.platform-ft-web.gov.uk"
 
   app_settings = {
   }
