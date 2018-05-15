@@ -19,7 +19,7 @@ module "feature-toggle-web-console" {
   resource_group_name = "${azurerm_resource_group.rg.name}"
   subscription        = "${var.subscription}"
   is_frontend         = true
-  additional_host_name = "platform.ft.sandbox.platform.hmcts.net"
+  additional_host_name = "featuretoggle.sandbox.platform.hmcts.net"
 
   app_settings = {
   }
