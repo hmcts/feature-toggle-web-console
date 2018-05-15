@@ -60,10 +60,8 @@ public class FF4jConfiguration {
         apiConfig.createUser("a", "a", true, true, Util.set("ADMIN", "USER"));
         apiConfig.createUser("b", "b", true, true, Util.set("ADMIN", "USER"));
 
-        // Check Autorization as well
         apiConfig.setAutorize(false);
         apiConfig.setWebContext("/api");
-        apiConfig.setPort(9899);
         apiConfig.setFF4j(getFF4j());
         return apiConfig;
     }
