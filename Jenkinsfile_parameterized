@@ -6,12 +6,12 @@ def channel = '#rpe-build-notices'
 properties([
   parameters([
     string(name: 'PRODUCT_NAME', defaultValue: 'platform', description: ''),
-    string(name: 'APP', defaultValue: 'feature-toggle-web-console', description: ''),
+    string(name: 'APP', defaultValue: 'ft-toggle-web', description: ''),
     string(name: 'TYPE', defaultValue: 'java', description: ''),
     string(name: 'ENVIRONMENT', defaultValue: 'sandbox', description: 'Environment where code should be built and deployed'),
     choice(name: 'SUBSCRIPTION', choices: 'sandbox', description: 'Azure subscriptions available to build in')
   ]),
-  [$class: 'GithubProjectProperty', projectUrlStr: 'github.com/hmcts/feature-toggle-web-console'],
+  [$class: 'GithubProjectProperty', projectUrlStr: 'github.com/hmcts/ft-toggle-web'],
   pipelineTriggers([[$class: 'GitHubPushTrigger']])
 ])
 
